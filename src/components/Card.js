@@ -9,9 +9,16 @@ import {
 export default function Card({ key, index, act, prompt }) {
   const colorClass = `grad${Math.floor(Math.random() * 11) + 1}`;
   return (
-    <div key={key} className="flex flex-col gap-1 justify-center items-center w-max relative z-10 m-6 self-center">
-        <p className="font-bold text-xl text-zinc-700"><span className="text-4xl mr-0.5 text-zinc-800">#</span>{ index }</p>
-        
+    <div
+      id={index}
+      key={key}
+      className="flex flex-col gap-1 justify-center items-center w-max relative z-10 m-6 self-center"
+    >
+      <p className="font-bold text-xl text-zinc-700">
+        <span className="text-4xl mr-0.5 text-zinc-800">#</span>
+        {index}
+      </p>
+
       <div className="w-80 bg-zinc-800/90 border-2 border-zinc-800 backdrop-blur-lg rounded-lg p-6 text-white text-justify font-bold">
         {act}
       </div>
