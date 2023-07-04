@@ -19,7 +19,7 @@ export default function Card({ key, index, act, prompt }) {
         {index}
       </p>
 
-      <div className="w-80 bg-zinc-800/90 border-2 border-zinc-800 backdrop-blur-lg rounded-lg p-6 text-white text-justify font-bold">
+      <div className="w-80 bg-zinc-800/90 border-2 border-zinc-800 backdrop-blur-lg rounded-xl p-6 text-white text-justify font-bold">
         {act}
       </div>
       <span className="w-4 h-4 bg-zinc-800 rounded-full" />
@@ -29,9 +29,9 @@ export default function Card({ key, index, act, prompt }) {
       >
         {prompt}
       </div>
-      <div className="relative w-[21rem] bg-zinc-800/90 backdrop-blur-lg h-16 -mt-8 rounded-lg p-4 pt-5 text-fuchsia-900 rotate-12"></div>
+      <div className="relative w-[21rem] bg-zinc-800/90 backdrop-blur-lg h-16 -mt-8 rounded-xl p-4 pt-5 text-fuchsia-900 rotate-12"></div>
       <div
-        className={`relative w-[21rem] ${colorClass} py-4 px-8 h-16 rounded-lg -mt-4 text-justify z-10 font-semibold -rotate-6 flex gap-2 justify-between`}
+        className={`relative w-[21rem] ${colorClass} py-4 px-8 h-16 rounded-xl -mt-4 text-justify z-10 font-semibold -rotate-6 flex gap-2 justify-between`}
       >
         <BsClipboard
           title="Copy to Clipboard"
