@@ -6,17 +6,19 @@ import {
   BsLink45Deg,
 } from "react-icons/bs";
 
-export default function Card({ act, prompt }) {
-  const colorClass = `grad${Math.floor(Math.random() * 14) + 1}`;
+export default function Card({ key, index, act, prompt }) {
+  const colorClass = `grad${Math.floor(Math.random() * 11) + 1}`;
   return (
-    <div className="flex flex-col gap-1 justify-center items-center w-max relative z-10 m-6 self-center">
-      <div className="w-80 bg-zinc-800/90 border-2 border-zinc-800 backdrop-blur-lg rounded-lg p-4 text-white text-justify">
+    <div key={key} className="flex flex-col gap-1 justify-center items-center w-max relative z-10 m-6 self-center">
+        <p className="font-bold text-xl text-zinc-700"><span className="text-4xl mr-0.5 text-zinc-800">#</span>{ index }</p>
+        
+      <div className="w-80 bg-zinc-800/90 border-2 border-zinc-800 backdrop-blur-lg rounded-lg p-6 text-white text-justify font-bold">
         {act}
       </div>
       <span className="w-4 h-4 bg-zinc-800 rounded-full" />
       <span className="w-2 h-2 bg-zinc-800 rounded-full" />
       <div
-        className={`relative w-80 ${colorClass} p-4 rounded-lg text-justify z-10 font-semibold`}
+        className={`relative w-80 ${colorClass} p-6 rounded-lg text-justify z-10 bg-opacity-75 bg-blend-lighten`}
       >
         {prompt}
       </div>
