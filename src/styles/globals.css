@@ -4,11 +4,11 @@
 @tailwind components;
 @tailwind utilities;
 
-html{
+html {
   scroll-behavior: smooth;
 }
 
-body{
+body {
   scroll-behavior: smooth;
 }
 
@@ -47,17 +47,7 @@ body{
 }
 
 .grad9 {
-  background-image: linear-gradient(135deg, #f761a1 10%, #8c1bab 100%);
-  color: white;
-}
-
-.grad10 {
   background-image: linear-gradient(135deg, #ffc0fc 10%, #eeb4e4 100%);
-}
-
-.grad11 {
-  background-image: linear-gradient(135deg, #3b2667 10%, #bc78ec 100%);
-  color: white;
 }
 
 @keyframes marquee {

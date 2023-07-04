@@ -15,7 +15,7 @@ export default function Home() {
         <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3 }} className="w-full">
           <Masonry>
             {prompts.map((prompt, index) => (
-              <Card key={index} index={index} act={prompt.act} prompt={prompt.prompt} />
+              <Card key={index} index={index+1} act={prompt.act} prompt={prompt.prompt} />
             ))}
           </Masonry>
         </ResponsiveMasonry>

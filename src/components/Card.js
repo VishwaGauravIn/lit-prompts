@@ -7,7 +7,7 @@ import {
 } from "react-icons/bs";
 
 export default function Card({ key, index, act, prompt }) {
-  const colorClass = `grad${Math.floor(Math.random() * 11) + 1}`;
+  const colorClass = `grad${Math.floor(Math.random() * 9) + 1}`;
   return (
     <div
       id={index}
