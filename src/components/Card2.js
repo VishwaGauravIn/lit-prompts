@@ -6,14 +6,15 @@ import {
   BsLink45Deg,
 } from "react-icons/bs";
 
-export default function Card2({ key, index, act, prompt, fullSize }) {
+export default function Card2({ index, act, prompt, fullSize }) {
   function copyLink() {
     navigator.clipboard.writeText(window.location.origin + "/prompts/" + index);
   }
   return (
     <div
-      key={key}
-      className={`max-[800px]:w-full md: w-[40vw] ${ fullSize ? "max-w-[95vw]" : "max-[800px]:max-w-[95vw] max-w-sm" } rounded-xl card p-6 text-zinc-200 flex flex-wrap flex-col gap-4 m-4 self-center`}
+      className={`max-[800px]:w-full md: w-[40vw] ${
+        fullSize ? "max-w-[95vw]" : "max-[800px]:max-w-[95vw] max-w-sm"
+      } rounded-xl card p-6 text-zinc-200 flex flex-wrap flex-col gap-4 m-4 self-center`}
     >
       <div className="flex w-full justify-between items-baseline">
         <p className="flex flex-wrap font-semibold text-xl md:text-2xl w-8/12">

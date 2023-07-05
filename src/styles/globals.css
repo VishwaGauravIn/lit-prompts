@@ -92,6 +92,7 @@ body {
   position: relative;
   white-space: nowrap;
   animation: marquee 60s linear infinite;
+  will-change: transform;
   font-family: "Fredericka the Great", cursive;
   opacity: 0.2;
 }

@@ -8,6 +8,13 @@ import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 const customFont = Open_Sans({ subsets: ["latin"] });
 
 export default function Home() {
+  const paginateArray = (array, pageNumber, pageSize) => {
+    const page = array.slice(
+      (pageNumber - 1) * pageSize,
+      pageNumber * pageSize
+    );
+    return page;
+  };
   return (
     <>
       <main
@@ -18,7 +25,7 @@ export default function Home() {
           className="w-full"
         >
           <Masonry>
-            {prompts.map((prompt, i) => (
+            {paginateArray(prompts, 1, 10).map((prompt, i) => (
               <Card2
                 key={i}
                 index={prompt.index}
