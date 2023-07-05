@@ -39,12 +39,23 @@ export default function Card({ key, index, act, prompt }) {
         />
         <BsLink45Deg
           title="Copy Link"
+          onClick={() =>
+            navigator.clipboard.writeText(
+              "https://litprompts.itsvg.in/#" + index
+            )
+          }
           className="w-7 h-7 opacity-90 hover:opacity-100 ease-in-out transition-all active:scale-90 cursor-pointer duration-100 stroke-[0.2]"
         />
-        <BsWhatsapp
-          title="Share on WhatsApp"
-          className="w-6 h-6 opacity-90 hover:opacity-100 ease-in-out transition-all active:scale-90 cursor-pointer duration-100 stroke-[0.1]"
-        />
+        <a
+          href={`whatsapp://send?text=*Act:* ${act} %0a%0a*Prompt:* ${prompt}%0a%0a*Share your own prompts at https://litprompts.itsvg.in* %0a%0a*LitPrompts*`}
+          data-action="share/whatsapp/share"
+          className=""
+        >
+          <BsWhatsapp
+            title="Share on WhatsApp"
+            className="w-6 h-6 opacity-90 hover:opacity-100 ease-in-out transition-all active:scale-90 cursor-pointer duration-100 stroke-[0.1]"
+          />
+        </a>
         <BsBookmarkHeart
           title="Bookmark it"
           className="w-6 h-6 opacity-90 hover:opacity-100 ease-in-out transition-all active:scale-90 cursor-pointer duration-100 stroke-[0.2]"

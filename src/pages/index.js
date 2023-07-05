@@ -12,10 +12,18 @@ export default function Home() {
       <main
         className={`${customFont.className} relative scroll-smooth flex flex-wrap gap-10 justify-center`}
       >
-        <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3 }} className="w-full">
+        <ResponsiveMasonry
+          columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3 }}
+          className="w-full"
+        >
           <Masonry>
-            {prompts.map((prompt, index) => (
-              <Card key={index} index={index+1} act={prompt.act} prompt={prompt.prompt} />
+            {prompts.map((prompt, i) => (
+              <Card
+                key={i}
+                index={prompt.index}
+                act={prompt.act}
+                prompt={prompt.prompt}
+              />
             ))}
           </Masonry>
         </ResponsiveMasonry>
