@@ -6,7 +6,7 @@ import {
   BsLink45Deg,
 } from "react-icons/bs";
 
-export default function Card({ key, index, act, prompt }) {
+export default function Card({ key, index, act, prompt, fullSize }) {
   const colorClass = `grad${Math.floor(Math.random() * 9) + 1}`;
   return (
     <div
@@ -19,19 +19,19 @@ export default function Card({ key, index, act, prompt }) {
         {index}
       </p>
 
-      <div className="w-80 bg-zinc-800/90 border-2 border-zinc-800 backdrop-blur-lg rounded-xl p-6 text-white text-justify font-bold">
+      <div className={`${fullSize ? "w-10/12" : "w-80"} max-w-xl bg-zinc-800/90 border-2 border-zinc-800 backdrop-blur-lg rounded-xl p-6 text-white text-justify font-bold`}>
         {act}
       </div>
       <span className="w-4 h-4 bg-zinc-800 rounded-full" />
       <span className="w-2 h-2 bg-zinc-800 rounded-full" />
       <div
-        className={`relative w-80 ${colorClass} p-6 rounded-lg text-justify z-10 bg-opacity-75 bg-blend-lighten`}
+        className={`relative ${fullSize ? "w-10/12" : "w-80"} max-w-xl ${colorClass} p-6 rounded-lg text-justify z-10 bg-opacity-75 bg-blend-lighten`}
       >
         {prompt}
       </div>
-      <div className="relative w-[21rem] bg-zinc-800/90 backdrop-blur-lg h-16 -mt-8 rounded-xl p-4 pt-5 text-fuchsia-900 rotate-12"></div>
+      <div className={`relative ${fullSize ? "w-9/12" : "w-[18rem]"} max-w-xl bg-zinc-800/90 backdrop-blur-lg h-16 -mt-8 rounded-xl p-4 pt-5 text-fuchsia-900`}></div>
       <div
-        className={`relative w-[21rem] ${colorClass} py-4 px-8 h-16 rounded-xl -mt-4 text-justify z-10 font-semibold -rotate-6 flex gap-2 justify-between`}
+        className={`relative ${fullSize ? "w-10/12" : "w-[21rem]"} max-w-xl ${colorClass} py-4 px-8 h-16 rounded-xl -mt-4 text-justify z-10 font-semibold flex gap-2 justify-between`}
       >
         <BsClipboard
           title="Copy to Clipboard"
