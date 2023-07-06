@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
-import { BsBookmarkHeart } from "react-icons/bs";
+import { BsBookmarkHeart, BsGithub } from "react-icons/bs";
 import Search from "./Search";
+import { Tooltip } from "react-tooltip";
 
 export default function Header({ searchBarvisible }) {
   useEffect(() => {
@@ -26,9 +27,28 @@ export default function Header({ searchBarvisible }) {
         <span className="hidden md:block">Lit Prompts</span>
       </div>
       {searchBarvisible && <Search />}
-      <div className="">
-        <BsBookmarkHeart />
+      <div className="flex justify-center items-center gap-4">
+        <a
+          href="https://github.com/VishwaGauravIn/lit-prompts"
+          target="_blank"
+          rel="noreferrer noopener"
+          className="group bg-zinc-800 hover:bg-fuchsia-400 p-2 rounded-full w-12 h-12 flex justify-center items-center cursor-pointer transition-all ease-in-out"
+          data-tooltip-id="tooltip"
+          data-tooltip-content="GitHub Repo"
+          data-tooltip-delay-show={1000}
+        >
+          <BsGithub className="w-7 h-7 transition-all ease-in-out text-fuchsia-400 group-hover:text-zinc-800 active:scale-90 outline-none" />
+        </a>
+        <div
+          className="group bg-zinc-800 hover:bg-red-400 p-2 rounded-full w-12 h-12 flex justify-center items-center cursor-pointer transition-all ease-in-out"
+          data-tooltip-id="tooltip"
+          data-tooltip-content="Saved Prompts"
+          data-tooltip-delay-show={1000}
+        >
+          <BsBookmarkHeart className="w-6 h-6 transition-all ease-in-out text-red-400 group-hover:text-zinc-800 active:scale-90 outline-none" />
+        </div>
       </div>
+      <Tooltip id="tooltip" />
     </div>
   );
 }
