@@ -51,14 +51,16 @@ export default function Card2({ index, act, prompt, fullSize }) {
           <BsLink45Deg className="w-7 h-7 transition-all ease-in-out group-hover:text-cyan-300 active:scale-90 outline-none" />
         </div>
         {/* Share on WhatsApp */}
-        <div
+        <a
+          href={`whatsapp://send?text=*Act:* ${act} %0a%0a*Prompt:* ${prompt}%0a%0a*Share your own prompts at https://litprompts.itsvg.in* %0a%0a*LitPrompts*`}
+          data-action="share/whatsapp/share"
           className="group hover:bg-green-100/20 p-2 rounded-full w-12 h-12 flex justify-center items-center cursor-pointer"
           data-tooltip-id="tooltip"
           data-tooltip-content="Share on WhatsApp"
           data-tooltip-delay-show={1000}
         >
           <BsWhatsapp className="w-6 h-6 transition-all ease-in-out group-hover:text-green-300 active:scale-90 outline-none" />
-        </div>
+        </a>
         {/* Save prompt */}
         <div
           className="group hover:bg-red-100/20 p-2 rounded-full w-12 h-12 flex justify-center items-center cursor-pointer"
