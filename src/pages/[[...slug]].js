@@ -19,7 +19,7 @@ export default function Home({ data, pageNumber, maxPageNumber }) {
         <title>Lit Prompts : Best AI prompts 🔥</title>
       </Head>
       <main
-        className={`${customFont.className} relative scroll-smooth flex flex-col ring flex-wrap gap-10 items-center`}
+        className={`${customFont.className} relative scroll-smooth flex flex-col flex-wrap gap-10 items-center`}
       >
         <Header />
         <ResponsiveMasonry
