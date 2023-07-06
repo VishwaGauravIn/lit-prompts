@@ -69,14 +69,14 @@ export default function Card2({ index, act, prompt, fullSize }) {
             <BsWhatsapp className="w-6 h-6 transition-all ease-in-out group-hover:text-green-300 active:scale-90 outline-none" />
           </a>
           {/* Save prompt */}
-          <div
+          {/* <div
             className="group hover:bg-red-100/20 p-2 rounded-full w-12 h-12 flex justify-center items-center cursor-pointer"
             data-tooltip-id="tooltip"
             data-tooltip-content="Save this prompt"
             data-tooltip-delay-show={1000}
           >
             <BsBookmarkHeart className="w-6 h-6 transition-all ease-in-out group-hover:text-red-300 active:scale-90 outline-none" />
-          </div>
+          </div> */}
         </div>
         <Tooltip id="tooltip" />
       </div>

@@ -39,14 +39,14 @@ export default function Header({ searchBarvisible }) {
         >
           <BsGithub className="w-7 h-7 transition-all ease-in-out text-fuchsia-400 group-hover:text-zinc-800 active:scale-90 outline-none" />
         </a>
-        <div
+        {/* <div
           className="group bg-zinc-800 hover:bg-red-400 p-2 rounded-full w-12 h-12 flex justify-center items-center cursor-pointer transition-all ease-in-out"
           data-tooltip-id="tooltip"
           data-tooltip-content="Saved Prompts"
           data-tooltip-delay-show={1000}
         >
           <BsBookmarkHeart className="w-6 h-6 transition-all ease-in-out text-red-400 group-hover:text-zinc-800 active:scale-90 outline-none" />
-        </div>
+        </div> */}
       </div>
       <Tooltip id="tooltip" />
     </div>
