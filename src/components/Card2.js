@@ -30,6 +30,7 @@ export default function Card2({ index, act, prompt, fullSize }) {
       <hr className="opacity-10" />
       {/* Tools */}
       <div className="flex gap-8 text-zinc-400 justify-around -mt-1 -mb-3">
+        {/* Copy Prompt */}
         <div
           className="group hover:bg-yellow-100/20 p-2 rounded-full w-12 h-12 flex justify-center items-center cursor-pointer"
           onClick={() => navigator.clipboard.writeText(prompt)}
@@ -39,6 +40,7 @@ export default function Card2({ index, act, prompt, fullSize }) {
         >
           <BsClipboard className="w-6 h-6 transition-all ease-in-out group-hover:text-yellow-300 active:scale-90 outline-none" />
         </div>
+        {/* Copy Link */}
         <div
           className="group hover:bg-cyan-100/20 p-2 rounded-full w-12 h-12 flex justify-center items-center cursor-pointer"
           onClick={() => copyLink()}
@@ -48,6 +50,7 @@ export default function Card2({ index, act, prompt, fullSize }) {
         >
           <BsLink45Deg className="w-7 h-7 transition-all ease-in-out group-hover:text-cyan-300 active:scale-90 outline-none" />
         </div>
+        {/* Share on WhatsApp */}
         <div
           className="group hover:bg-green-100/20 p-2 rounded-full w-12 h-12 flex justify-center items-center cursor-pointer"
           data-tooltip-id="tooltip"
@@ -56,6 +59,7 @@ export default function Card2({ index, act, prompt, fullSize }) {
         >
           <BsWhatsapp className="w-6 h-6 transition-all ease-in-out group-hover:text-green-300 active:scale-90 outline-none" />
         </div>
+        {/* Save prompt */}
         <div
           className="group hover:bg-red-100/20 p-2 rounded-full w-12 h-12 flex justify-center items-center cursor-pointer"
           data-tooltip-id="tooltip"
