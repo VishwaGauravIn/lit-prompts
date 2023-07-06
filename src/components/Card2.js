@@ -27,14 +27,23 @@ export default function Card2({ index, act, prompt, fullSize }) {
       <hr className="opacity-10" />
       <p className="text-zinc-300">{prompt}</p>
       <hr className="opacity-10" />
-      <div className="flex gap-8 text-zinc-400 justify-around">
-        <BsClipboard className="w-6 h-6 transition-all ease-in-out hover:text-yellow-300 active:scale-90 cursor-pointer" />
-        <BsLink45Deg
-          onClick={() => copyLink()}
-          className="w-7 h-7 transition-all ease-in-out hover:text-cyan-300 active:scale-90 cursor-pointer"
-        />
-        <BsWhatsapp className="w-6 h-6 transition-all ease-in-out hover:text-green-300 active:scale-90 cursor-pointer" />
-        <BsBookmarkHeart className="w-6 h-6 transition-all ease-in-out hover:text-red-300 active:scale-90 cursor-pointer" />
+      {/* Tools */}
+      <div className="flex gap-8 text-zinc-400 justify-around -mt-1 -mb-3">
+        <div className="group hover:bg-yellow-100/20 p-2 rounded-full w-12 h-12 flex justify-center items-center">
+          <BsClipboard className="w-6 h-6 transition-all ease-in-out group-hover:text-yellow-300 active:scale-90 cursor-pointer" />
+        </div>
+        <div className="group hover:bg-cyan-100/20 p-2 rounded-full w-12 h-12 flex justify-center items-center">
+          <BsLink45Deg
+            onClick={() => copyLink()}
+            className="w-7 h-7 transition-all ease-in-out group-hover:text-cyan-300 active:scale-90 cursor-pointer"
+          />
+        </div>
+        <div className="group hover:bg-green-100/20 p-2 rounded-full w-12 h-12 flex justify-center items-center">
+          <BsWhatsapp className="w-6 h-6 transition-all ease-in-out group-hover:text-green-300 active:scale-90 cursor-pointer" />
+        </div>
+        <div className="group hover:bg-red-100/20 p-2 rounded-full w-12 h-12 flex justify-center items-center">
+          <BsBookmarkHeart className="w-6 h-6 transition-all ease-in-out group-hover:text-red-300 active:scale-90 cursor-pointer" />
+        </div>
       </div>
     </div>
   );
