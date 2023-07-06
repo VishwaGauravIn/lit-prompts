@@ -32,12 +32,13 @@ export default function Header({ searchBarvisible }) {
           href="https://github.com/VishwaGauravIn/lit-prompts"
           target="_blank"
           rel="noreferrer noopener"
-          className="group bg-zinc-800 hover:bg-fuchsia-400 p-2 rounded-full w-12 h-12 flex justify-center items-center cursor-pointer transition-all ease-in-out"
+          className="group bg-zinc-800 hover:bg-fuchsia-300 p-2 rounded-full h-12 w-12 sm:w-auto flex justify-center items-center cursor-pointer transition-all ease-in-out gap-2 text-fuchsia-400 hover:text-zinc-800 font-semibold sm:px-4"
           data-tooltip-id="tooltip"
           data-tooltip-content="GitHub Repo"
           data-tooltip-delay-show={1000}
         >
-          <BsGithub className="w-7 h-7 transition-all ease-in-out text-fuchsia-400 group-hover:text-zinc-800 active:scale-90 outline-none" />
+          <BsGithub className="w-7 h-7 active:scale-90 outline-none" />
+          <span className="hidden sm:block">GitHub Repo</span>
         </a>
         {/* <div
           className="group bg-zinc-800 hover:bg-red-400 p-2 rounded-full w-12 h-12 flex justify-center items-center cursor-pointer transition-all ease-in-out"
