@@ -21,7 +21,7 @@ export default function Home({ data, pageNumber, maxPageNumber }) {
       <main
         className={`${customFont.className} relative scroll-smooth flex flex-col flex-wrap gap-10 items-center`}
       >
-        <Header />
+        <Header searchBarvisible={true} />
         <ResponsiveMasonry
           columnsCountBreakPoints={{ 350: 1, 800: 2, 1230: 3 }}
           className="w-full max-w-7xl"
