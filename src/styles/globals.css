@@ -100,3 +100,8 @@ body {
 .marquee:nth-child(odd) {
   animation: marquee2 60s linear infinite;
 }
+
+/* Hide scrollbar */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
