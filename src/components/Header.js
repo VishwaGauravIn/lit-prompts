@@ -2,9 +2,9 @@ import React, { useEffect } from "react";
 
 export default function Header() {
   useEffect(() => {
+    let scrollYval = scrollY;
     try {
       const scrollEvent = window.addEventListener("scroll", () => {
-        let scrollYval = scrollY;
         if (scrollYval > 50) {
           document.getElementById("navbar").style.backgroundColor =
             "rgb(18, 18, 18, 0.9)";
