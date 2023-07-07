@@ -1,5 +1,4 @@
-import Card from "@/components/Card";
-import Card2 from "@/components/Card2";
+  import Card2 from "@/components/Card2";
 import Header from "@/components/Header";
 import { prompts } from "@/data/prompts";
 import { useRouter } from "next/router";

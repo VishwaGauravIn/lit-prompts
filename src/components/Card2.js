@@ -13,7 +13,12 @@ export default function Card2({ index, act, prompt, fullSize }) {
   function copyLink() {
     navigator.clipboard.writeText(window.location.origin + "/prompts/" + index);
     toast.success("Link copied to clipboard!");
+    playPop();
   }
+  function playPop() {
+    document.getElementById("popAudio").play();
+  }
+
   return (
     <>
       <div
@@ -39,7 +44,8 @@ export default function Card2({ index, act, prompt, fullSize }) {
             className="group hover:bg-yellow-100/20 p-2 rounded-full w-12 h-12 flex justify-center items-center cursor-pointer"
             onClick={() =>
               navigator.clipboard.writeText(prompt) &
-              toast.success("Prompt copied to clipboard!")
+              toast.success("Prompt copied to clipboard!") &
+              playPop()
             }
             data-tooltip-id="tooltip"
             data-tooltip-content="Copy Prompt"
@@ -81,6 +87,7 @@ export default function Card2({ index, act, prompt, fullSize }) {
         <Tooltip id="tooltip" />
       </div>
       <Toast />
+      <audio id="popAudio" src="/pop.mp3" />
     </>
   );
 }
