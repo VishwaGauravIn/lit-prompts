@@ -40,6 +40,24 @@ export default function Document() {
           property="twitter:image"
           content="https://litprompts.itsvg.in/og.png"
         />
+        {/* Google Analytics */}
+        <script
+          async
+          src={`https://www.googletagmanager.com/gtag/js?id=G-YBHV2ZQ4NV`}
+        />
+        <script
+          // eslint-disable-next-line react/no-danger
+          dangerouslySetInnerHTML={{
+            __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-YBHV2ZQ4NV', {
+              page_path: window.location.pathname,
+            });
+          `,
+          }}
+        />
         {/* Google Ads */}
         <script
           async
