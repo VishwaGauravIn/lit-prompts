@@ -1,9 +1,10 @@
 import React, { useEffect } from "react";
 import { BsBookmarkHeart, BsGithub } from "react-icons/bs";
+import { HiVolumeOff, HiVolumeUp } from "react-icons/hi";
 import Search from "./Search";
 import { Tooltip } from "react-tooltip";
 
-export default function Header({ searchBarvisible }) {
+export default function Header({ searchBarvisible, muted, setMuted }) {
   useEffect(() => {
     window.addEventListener("scroll", () => {
       let scrollYval = scrollY;
@@ -28,6 +29,17 @@ export default function Header({ searchBarvisible }) {
       </div>
       {searchBarvisible && <Search />}
       <div className="flex justify-center items-center gap-4">
+        {muted !== undefined && (
+          <button
+            className="text-white bg-zinc-800 w-7 h-7 flex justify-center items-center rounded-full"
+            data-tooltip-id="tooltip"
+            data-tooltip-content={muted ? "Unmute" : "Mute"}
+            data-tooltip-delay-show={1000}
+            onClick={() => setMuted(!muted)}
+          >
+            {muted ? <HiVolumeOff /> : <HiVolumeUp />}
+          </button>
+        )}
         <a
           href="https://github.com/VishwaGauravIn/lit-prompts"
           target="_blank"

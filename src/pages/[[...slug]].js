@@ -5,13 +5,14 @@ import { prompts } from "@/data/prompts";
 import { Open_Sans } from "next/font/google";
 import Head from "next/head";
 import { useRouter } from "next/router";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 
 const customFont = Open_Sans({ subsets: ["latin"] });
 
 export default function Home({ data, pageNumber, maxPageNumber }) {
   const { isReady, router } = useRouter();
+  const [muted, setMuted] = useState(false);
   if (isReady && router) {
     router.push(`/${pageNumber}`);
   }
@@ -32,7 +33,7 @@ export default function Home({ data, pageNumber, maxPageNumber }) {
       <main
         className={`${customFont.className} relative scroll-smooth flex flex-col flex-wrap gap-2 sm:gap-10 items-center`}
       >
-        <Header searchBarvisible={true} />
+        <Header searchBarvisible={true} muted={muted} setMuted={setMuted} />
         <div id="masonry" className="w-full flex justify-center">
           <ResponsiveMasonry
             columnsCountBreakPoints={{ 350: 1, 800: 2, 1230: 3 }}
@@ -53,6 +54,7 @@ export default function Home({ data, pageNumber, maxPageNumber }) {
         <Pagination
           pageNumber={parseInt(pageNumber)}
           maxPageNumber={parseInt(maxPageNumber)}
+          muted={muted}
         />
       </main>
     </>
