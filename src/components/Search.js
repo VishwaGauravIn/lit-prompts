@@ -27,7 +27,7 @@ export default function Search() {
     setSearchResults(tempArr);
   }
   return (
-    <div className="group absolute top-5 md:top-4 left-1/2 -translate-x-1/2 opacity-75 focus-within:opacity-100 transition-all ease-in-out z-10">
+    <div className="group absolute top-5 left-1/2 -translate-x-1/2 opacity-75 focus-within:opacity-100 transition-all ease-in-out z-10">
       <div className="bg-white rounded-full">
         <input
           type="text"
