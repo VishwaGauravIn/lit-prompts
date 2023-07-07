@@ -8,7 +8,7 @@ export default function Document() {
         <meta name="title" content="Lit Prompts : Best AI prompts 🔥" />
         <meta
           name="description"
-          content="Discover the ultimate collection of top AI prompts for ChatGPT, Bard, and beyond. Elevate your prompt skills with this open-source project.  Unleash the full potential of AI-driven interactions."
+          content="Discover the ultimate collection of top AI prompts for ChatGPT, Bard, and beyond. Elevate your prompt skills with this open-source project. Unleash the full potential of AI-driven interactions."
         />
         <meta name="copyright" content="VishwaGauravIn" />
         <meta
@@ -20,7 +20,7 @@ export default function Document() {
         <meta property="og:title" content="Lit Prompts : Best AI prompts 🔥" />
         <meta
           property="og:description"
-          content="Discover the ultimate collection of top AI prompts for ChatGPT, Bard, and beyond. Elevate your prompt skills with this open-source project.  Unleash the full potential of AI-driven interactions."
+          content="Discover the ultimate collection of top AI prompts for ChatGPT, Bard, and beyond. Elevate your prompt skills with this open-source project. Unleash the full potential of AI-driven interactions."
         />
         <meta
           property="og:image"
@@ -34,7 +34,7 @@ export default function Document() {
         />
         <meta
           property="twitter:description"
-          content="Discover the ultimate collection of top AI prompts for ChatGPT, Bard, and beyond. Elevate your prompt skills with this open-source project.  Unleash the full potential of AI-driven interactions."
+          content="Discover the ultimate collection of top AI prompts for ChatGPT, Bard, and beyond. Elevate your prompt skills with this open-source project. Unleash the full potential of AI-driven interactions."
         />
         <meta
           property="twitter:image"
