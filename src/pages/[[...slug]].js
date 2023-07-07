@@ -70,7 +70,9 @@ const paginateArray = (array, pageNumber, pageSize) => {
 };
 
 export const getServerSideProps = async (pageContext) => {
-  const maxPageNumber = Math.ceil(prompts.length / 10);
+  // just change the pageSize to change the number of prompts per page
+  const pageSize = 9;
+  const maxPageNumber = Math.ceil(prompts.length / pageSize);
   // default props : redirecting to page 1 if page number is invalid
   const defaultProps = {
     redirect: {
@@ -85,7 +87,7 @@ export const getServerSideProps = async (pageContext) => {
     if (pageNumber > 0 && pageNumber <= maxPageNumber) {
       return {
         props: {
-          data: paginateArray(prompts, pageNumber, 10),
+          data: paginateArray(prompts, pageNumber, [pageSize]),
           pageNumber: pageNumber,
           maxPageNumber: maxPageNumber,
         },
