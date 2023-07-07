@@ -29,7 +29,8 @@ export default function Header({ searchBarvisible, muted, setMuted }) {
       </div>
       {searchBarvisible && <Search />}
       <div className="flex justify-center items-center gap-4">
-        {muted !== undefined && (
+        {/* Disabling this option to mute/unmute for now */}
+        {/* {muted !== undefined && (
           <button
             className="text-white bg-zinc-800 w-7 h-7 flex justify-center items-center rounded-full"
             data-tooltip-id="tooltip"
@@ -39,7 +40,7 @@ export default function Header({ searchBarvisible, muted, setMuted }) {
           >
             {muted ? <HiVolumeOff /> : <HiVolumeUp />}
           </button>
-        )}
+        )} */}
         <a
           href="https://github.com/VishwaGauravIn/lit-prompts"
           target="_blank"
