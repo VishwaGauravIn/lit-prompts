@@ -22,9 +22,9 @@ export default function Card2({ index, act, prompt, fullSize }) {
   return (
     <>
       <div
-        className={`max-[800px]:w-full md: w-[40vw] ${
+        className={`${
           fullSize ? "max-w-[95vw]" : "max-[800px]:max-w-[95vw] max-w-sm"
-        } rounded-xl card p-6 text-zinc-200 flex flex-wrap flex-col gap-4 m-4 self-center`}
+        } max-[800px]:w-full md: w-[40vw] rounded-3xl card p-6 text-zinc-200 flex flex-wrap flex-col gap-4 m-4 self-center shadow-2xl`}
       >
         <div className="flex w-full justify-between items-baseline">
           <p className="flex flex-wrap font-semibold text-xl md:text-2xl w-8/12">

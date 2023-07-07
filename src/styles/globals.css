@@ -20,7 +20,7 @@ body {
     rgba(18, 18, 18, 0.9) 0%,
     rgba(18, 18, 18, 0.4) 74%
   );
-  box-shadow: 00px 0px 40px -6px rgba(18, 18, 18, 0.2);
+  /* box-shadow: 00px 0px 40px -6px rgba(18, 18, 18, 0.2); */
 }
 
 .grad1 {
