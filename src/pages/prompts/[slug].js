@@ -1,4 +1,5 @@
-  import Card2 from "@/components/Card2";
+import Card2 from "@/components/Card2";
+import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import { prompts } from "@/data/prompts";
 import { useRouter } from "next/router";
@@ -25,6 +26,7 @@ export default function Prompts() {
     <main className="z-10 relative flex flex-col items-center">
       <Header />
       <div>{isReady && card}</div>
+      <Footer />
     </main>
   );
 }

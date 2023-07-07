@@ -1,4 +1,5 @@
 import Card2 from "@/components/Card2";
+import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Pagination from "@/components/Pagination";
 import { prompts } from "@/data/prompts";
@@ -56,6 +57,7 @@ export default function Home({ data, pageNumber, maxPageNumber }) {
           maxPageNumber={parseInt(maxPageNumber)}
           muted={muted}
         />
+        <Footer />
       </main>
     </>
   );
