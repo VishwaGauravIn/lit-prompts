@@ -2,6 +2,7 @@ import Card2 from "@/components/Card2";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import { prompts } from "@/data/prompts";
+import Head from "next/head";
 import { useRouter } from "next/router";
 import React from "react";
 
@@ -23,10 +24,15 @@ export default function Prompts() {
     }
   }
   return (
-    <main className="z-10 relative flex flex-col items-center">
-      <Header />
-      <div>{isReady && card}</div>
-      <Footer />
-    </main>
+    <>
+      <Head>
+        <title>Lit Prompts : Best AI prompts 🔥</title>
+      </Head>
+      <main className="z-10 relative flex flex-col items-center">
+        <Header />
+        <div>{isReady && card}</div>
+        <Footer />
+      </main>
+    </>
   );
 }
