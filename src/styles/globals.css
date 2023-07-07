@@ -118,3 +118,9 @@ body {
     opacity: 1;
   }
 }
+
+@media (min-width: 768px) {
+  .logo-black {
+    @apply saturate-0 filter invert;
+  }
+}

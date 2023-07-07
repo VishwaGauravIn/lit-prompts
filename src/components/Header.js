@@ -13,9 +13,11 @@ export default function Header({ searchBarvisible, muted, setMuted }) {
         document.getElementById("navbar").style.backgroundColor =
           "rgb(18, 18, 18, 0.9)";
         document.getElementById("navbar").style.backdropFilter = "blur(12px)";
+        document.getElementById("logo").classList.remove("logo-black");
       } else {
         document.getElementById("navbar").style.backgroundColor = "transparent";
         document.getElementById("navbar").style.backdropFilter = "blur(0px)";
+        document.getElementById("logo").classList.add("logo-black");
       }
     });
   }, []);
@@ -25,14 +27,15 @@ export default function Header({ searchBarvisible, muted, setMuted }) {
       className="flex justify-between w-full px-4 md:px-6 py-4 md:py-3 top-0 sticky z-30"
     >
       <Link href="/">
-        <div className="flex justify-center items-center text-2xl font-bold text-yellow-400 pointer-events-none select-none">
+        <div id="logo" className="flex justify-center items-center text-2xl font-bold text-yellow-400 pointer-events-none select-none logo-black">
           <img
+            
             src="/logo.png"
             alt=""
             className="w-12 md:w-14 h-12 p-2 md:p-0 md:h-14 bg-zinc-800 md:bg-transparent rounded-full md:rounded-none"
             draggable="false"
           />
-          <span className="hidden md:block text-zinc-800">Lit Prompts</span>
+          <span className="hidden md:block">Lit Prompts</span>
         </div>
       </Link>
       {searchBarvisible && <Search />}
