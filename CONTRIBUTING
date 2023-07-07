@@ -1,0 +1,16 @@
+## 💛 How to Contribute  
+You can contribute in 3 ways:  
+- **Adding a prompt:**
+  For adding a new prompt, you can add the new prompt in the ```src/data/prompts.js``` file in the following format: [PROMPT SHOULD BE GOOD IN QUALITY]
+  ```js
+  {
+    act: "Salesperson",
+    prompt:
+      "I want you to act as a salesperson. Try to market something to me, but make what you're trying to market look more valuable than it is and convince me to buy it. Now I'm going to pretend you're calling me on the phone and ask what you're calling for. Hello, what did you call for?",
+    index: 136,
+  },
+  ```
+- **Improving the website:**  
+Our website is built on NextJS and TailwindCSS so if you wish to contribute to the UI or functionality of the website, you can just fork this repository and make your changes and then raise a pull request.
+- **Noticing issues / bugs / new feature to add:**  
+You just have to create an issue.
