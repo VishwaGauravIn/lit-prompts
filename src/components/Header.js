@@ -3,6 +3,7 @@ import { BsBookmarkHeart, BsGithub } from "react-icons/bs";
 import { HiVolumeOff, HiVolumeUp } from "react-icons/hi";
 import Search from "./Search";
 import { Tooltip } from "react-tooltip";
+import Link from "next/link";
 
 export default function Header({ searchBarvisible, muted, setMuted }) {
   useEffect(() => {
@@ -23,10 +24,17 @@ export default function Header({ searchBarvisible, muted, setMuted }) {
       id="navbar"
       className="flex justify-between w-full px-4 md:px-6 py-4 md:py-3 top-0 sticky z-30"
     >
-      <div className="flex justify-center items-center text-2xl font-bold text-yellow-400">
-        <img src="/logo.png" alt="" className="w-8 md:w-14 h-8 md:h-14" />
-        <span className="hidden md:block">Lit Prompts</span>
-      </div>
+      <Link href="/">
+        <div className="flex justify-center items-center text-2xl font-bold text-yellow-400 pointer-events-none select-none">
+          <img
+            src="/logo.png"
+            alt=""
+            className="w-12 md:w-14 h-12 p-2 md:p-0 md:h-14 bg-zinc-800 md:bg-transparent rounded-full md:rounded-none"
+            draggable="false"
+          />
+          <span className="hidden md:block text-zinc-800">Lit Prompts</span>
+        </div>
+      </Link>
       {searchBarvisible && <Search />}
       <div className="flex justify-center items-center gap-4">
         {/* Disabling this option to mute/unmute for now */}
