@@ -65,7 +65,7 @@ export default function Card2({ index, act, prompt, fullSize }) {
           </div>
           {/* Share on WhatsApp */}
           <a
-            href={`whatsapp://send?text=*Act:* ${act} %0a%0a*Prompt:* ${prompt}%0a%0a*Share your own prompts at https://litprompts.itsvg.in* %0a%0a*LitPrompts*`}
+            href={`whatsapp://send?text=*Act:* ${act} %0a%0a*Prompt:* ${prompt}%0a%0a*Get the best AI prompts for ChatGPT, Bard and more only on https://litprompts.itsvg.in* %0a%0a*LitPrompts*`}
             data-action="share/whatsapp/share"
             className="group hover:bg-green-100/20 p-2 rounded-full w-12 h-12 flex justify-center items-center cursor-pointer"
             data-tooltip-id="tooltip"
