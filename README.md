@@ -8,7 +8,7 @@
 </div>
 <br/>
 
-![screenshot](https://github.com/VishwaGauravIn/lit-prompts/assets/81325730/144b8e04-965e-47e7-84b8-9663f594f458)
+![1](https://github.com/VishwaGauravIn/lit-prompts/assets/81325730/7913e00b-961e-4f48-8c9f-c3080f9784e9)
 
 # 🌐 [Visit Website](https://litprompts.itsvg.in/)
 
