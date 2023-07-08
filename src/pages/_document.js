@@ -1,4 +1,5 @@
 import AnimatedBG from "@/components/AnimatedBG";
+import Banner from "@/components/Banner";
 import { Html, Head, Main, NextScript } from "next/document";
 
 export default function Document() {
@@ -66,6 +67,7 @@ export default function Document() {
         ></script>
       </Head>
       <body>
+        <Banner />
         <Main />
         <NextScript />
         <AnimatedBG />

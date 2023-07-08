@@ -24,7 +24,7 @@ export default function Header({ searchBarvisible, muted, setMuted }) {
   return (
     <div
       id="navbar"
-      className="flex justify-between w-full px-4 md:px-6 py-4 md:py-3 top-0 sticky z-30"
+      className="flex justify-between w-full px-4 md:px-6 py-4 md:py-3 top-8 sticky z-30"
     >
       <Link href="/">
         <div id="logo" className="flex justify-center items-center text-2xl font-bold text-yellow-400 pointer-events-none select-none logo-black">
